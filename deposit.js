@@ -1,18 +1,20 @@
-let depositSum = 0;
-let balanceSum = 1240;
 document.getElementById("btn-deposit").addEventListener("click", function () {
+  const balanceTotalEl = document.getElementById("balance-total");
+  const previousBalance = parseFloat(balanceTotalEl.innerText);
   const depositField = document.getElementById("deposit-field");
-  const deposit = depositField.value;
-  const depositTotal = document.getElementById("deposit-total");
-  const balanceEl = document.getElementById("balance-total");
+  const deposit = parseFloat(depositField.value);
+  const depositEl = document.getElementById("deposit-total");
+  const previousDeposit = parseFloat(depositEl.innerText);
 
   if (deposit.length === 0) {
     alert("You haven't entered any amount to deposit.");
+    depositField.value = "";
+  } else if (deposit <= 0) {
+    alert("Enter positive amount to deposit.");
+    depositField.value = "";
   } else {
-    depositSum += parseFloat(deposit);
-    depositTotal.innerText = "$" + depositSum;
-    balanceSum += parseFloat(deposit);
-    balanceEl.innerText = balanceSum;
+    depositEl.innerText = previousDeposit + deposit;
+    balanceTotalEl.innerText = previousBalance + deposit;
     depositField.value = "";
   }
 });
