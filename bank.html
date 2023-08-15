@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Inside</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="mt-6 text-5xl text-center">
+        Lets get some
+        <span class="font-semibold text-center text-violet-600">Money</span>!!!
+      </h1>
+    </header>
+    <main>
+      <section class="mt-12">
+        <div class="grid w-9/12 grid-cols-3 gap-4 mx-auto">
+          <div class="p-8 bg-green-500 rounded-xl">
+            <h4 class="text-2xl text-white">Deposit</h4>
+            <h2 class="text-5xl text-white" id="deposit-total">$00</h2>
+          </div>
+          <div class="p-8 bg-yellow-500 rounded-xl">
+            <h4 class="text-2xl text-white">Withdraw</h4>
+            <h2 class="text-5xl text-white">$00</h2>
+          </div>
+          <div class="p-8 bg-violet-500 rounded-xl">
+            <h4 class="text-2xl text-white">Balance</h4>
+            <h2 class="text-5xl text-white">$1240</h2>
+          </div>
+        </div>
+      </section>
+      <!-- deposit and withdraw -->
+      <section class="mt-12">
+        <div class="grid w-9/12 grid-cols-2 gap-4 mx-auto">
+          <div class="p-8 bg-fuchsia-500 rounded-xl">
+            <h4 class="mb-4 text-2xl text-white">PleaseDeposit</h4>
+
+            <input
+              class="block w-9/12 px-3 mb-2"
+              type="number"
+              placeholder="$ Amount"
+              id="deposit-field"
+            />
+
+            <button
+              class="px-8 py-2 font-medium text-white rounded-lg btn bg-amber-600 hover:bg-amber-500"
+              id="btn-deposit"
+            >
+              Deposit
+            </button>
+          </div>
+          <div class="p-8 bg-indigo-500 rounded-xl">
+            <h4 class="mb-4 text-2xl text-white">Please Withdraw</h4>
+
+            <input
+              class="block w-9/12 px-3 mb-2"
+              type="number"
+              placeholder="$ Amount"
+              id="user-email"
+            />
+
+            <button
+              class="px-8 py-2 font-medium text-white rounded-lg btn bg-amber-600 hover:bg-amber-500"
+              id="btn-submit"
+            >
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./deposit.js"></script>
+  </body>
+</html>
